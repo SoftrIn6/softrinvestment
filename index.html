@@ -1,154 +1,170 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Investment Page</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+<div class="ticker-container">
+  <!-- Header Row for Titles -->
+  <div class="ticker-header">
+    <span class="header-title">Name</span>
+    <span class="header-title">Action</span>
+    <span class="header-title">Amount</span>
+  </div>
+  <div id="ticker" class="ticker"></div>
+</div>
 
-    <!-- Header Section -->
-    <header class="header">
-        <div class="logo">
-            <img src="path/to/logo.png" alt="Logo">
-        </div>
-        <nav class="navbar">
-            <a href="#">Home</a>
-            <a href="#">About Us</a>
-            <a href="#">Invest Now</a>
-            <a href="#">Contact Us</a>
-        </nav>
-        <div class="header-buttons">
-            <a href="#" class="button wallet">Go To My Wallet</a>
-            <a href="#" class="button profile">Go To My Profile</a>
-        </div>
-    </header>
+<script>
+  const names = [
+    "Sibongile", "Thabo", "Jan", "Hendrik", "Emily", "Liam", "Noah", "Aisha", "Lerato", "Chris", 
+    "Sarah", "Elijah", "Oliver", "Ethan", "Amelia", "Mia", "Zander", "Charl", "Johan", "Zoe"
+  ];
+  
+  const actions = ["Deposited", "Withdrawn"];
+  const totalEntries = 3840;
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <img src="path/to/hero-image.png" alt="Hero Image">
-            <div class="hero-text">
-                <h1>INVESTMENT YOU CAN TRUST</h1>
-                <p>Withdraw<br>Secure Your Financial Future with Our High-Yield Investment Firm. Earn Massive Profits with Our AI Powered Trading/Investments</p>
-                <a href="#" class="button wallet">Go to My Wallet</a>
-            </div>
-        </div>
-        <div class="app-buttons">
-            <a href="#"><img src="path/to/google-play.png" alt="Google Play"></a>
-        </div>
-    </section>
+  function generateDailyTransactions() {
+    const transactions = [];
+    const usedNames = new Set();
 
-    <!-- Investment Options Section -->
-    <section class="investment-options">
-        <h2>Invest</h2>
-        <p>All your investments.<br>All on Soft Return Investment</p>
-        <div class="options">
-            <div class="option">
-                <h3>Cryptocurrencies</h3>
-                <p>Buy, sell, and swap the cryptocurrencies you want anytime, anywhere.</p>
-                <a href="#">Learn more</a>
-            </div>
-            <div class="option">
-                <h3>Stocks</h3>
-                <p>Buy, sell, and swap stocks you want anytime, anywhere. Invest in fractions of your favorite companies without buying a full share.</p>
-                <a href="#">Read story</a>
-            </div>
-            <div class="option">
-                <h3>ETFs</h3>
-                <p>Invest in fractions of your favorite ETFs without buying a full share.</p>
-                <a href="#">Learn more</a>
-            </div>
-        </div>
-    </section>
+    for (let i = 0; i < totalEntries; i++) {
+      let name;
+      do {
+        name = names[Math.floor(Math.random() * names.length)];
+      } while (usedNames.has(name));
+      
+      usedNames.add(name);
 
-    <!-- Pricing Section -->
-    <section class="pricing">
-        <h2>Pricing that fits every stage</h2>
-        <p>Whether you are just starting or have a growing startup</p>
-        <div class="pricing-plans">
-            <div class="plan">
-                <div class="label">Most popular</div>
-                <h3>Started Return</h3>
-                <p>$37 / 1 Day</p>
-                <ul>
-                    <li>Invest $75 and Earn $200 in Profit</li>
-                    <li>1 Day Duration</li>
-                </ul>
-                <a href="#" class="button buy">Buy Now</a>
-            </div>
-            <div class="plan">
-                <h3>Basic Return</h3>
-                <p>$85 / 3 Days</p>
-                <ul>
-                    <li>Invest $85 and Earn $450 in 3 Days</li>
-                    <li>3 Days Duration</li>
-                </ul>
-                <a href="#" class="button buy">Buy Now</a>
-            </div>
-            <div class="plan">
-                <h3>Standard Return</h3>
-                <p>$140 / 4 Days</p>
-                <ul>
-                    <li>Invest $140 and Earn $920</li>
-                    <li>4 Days Duration</li>
-                </ul>
-                <a href="#" class="button buy">Buy Now</a>
-            </div>
-            <div class="plan">
-                <h3>Custom Price Return</h3>
-                <p>Starts from $10 / 1 Day</p>
-                <ul>
-                    <li>Get Plan Starting from $10</li>
-                    <li>1 Day Duration</li>
-                </ul>
-                <a href="#" class="button custom">Request Custom Price</a>
-            </div>
-        </div>
-    </section>
+      const action = actions[Math.floor(Math.random() * actions.length)];
+      const amount = generateRandomAmount();
 
-    <!-- Market & News Section -->
-    <section class="market-news">
-        <div class="market-chart">
-            <img src="path/to/market-chart.png" alt="Market Chart">
-        </div>
-        <div class="crypto-news">
-            <img src="path/to/crypto-news.png" alt="Crypto News">
-        </div>
-    </section>
+      transactions.push({
+        name: name,
+        action: action,
+        amount: `$${amount}`
+      });
 
-    <!-- Footer Section -->
-    <footer class="footer">
-        <div class="trusted">
-            <img src="path/to/trust-logo1.png" alt="Regulated">
-            <img src="path/to/trust-logo2.png" alt="Safe & Secure">
-            <img src="path/to/trust-logo3.png" alt="Trusted">
-        </div>
-        <div class="featured">
-            <img src="path/to/logo-forbes.png" alt="Forbes">
-            <img src="path/to/logo-bloomberg.png" alt="Bloomberg">
-            <img src="path/to/logo-techcrunch.png" alt="TechCrunch">
-            <img src="path/to/logo-cnbc.png" alt="CNBC">
-        </div>
-        <div class="footer-links">
-            <div class="company">
-                <h4>Company</h4>
-                <a href="#">About</a>
-                <a href="#">Contact</a>
-            </div>
-            <div class="product">
-                <h4>Product</h4>
-                <a href="#">Features</a>
-                <a href="#">Invest Now</a>
-            </div>
-            <div class="support">
-                <h4>Support</h4>
-                <a href="#">Help Center</a>
-                <a href="#">FAQ</a>
-            </div>
-        </div>
-    </footer>
+      if (usedNames.size === names.length) usedNames.clear();
+    }
+    return transactions;
+  }
 
-</body>
-</html>
+  function generateRandomAmount() {
+    const isSmallAmount = Math.random() < 0.7;
+    return isSmallAmount ? (Math.floor(Math.random() * 200) + 10).toLocaleString() : (Math.floor(Math.random() * 19950) + 50).toLocaleString();
+  }
+
+  function displayTransactions(transactionBatch) {
+    const ticker = document.getElementById("ticker");
+    ticker.innerHTML = ""; 
+
+    transactionBatch.forEach(transaction => {
+      const tickerItem = document.createElement("div");
+      tickerItem.classList.add("ticker-item");
+      tickerItem.innerHTML = `
+        <span class="item name">${transaction.name}</span> 
+        <span class="item action">${transaction.action}</span> 
+        <span class="item amount">${transaction.amount}</span>
+      `;
+      ticker.appendChild(tickerItem);
+    });
+  }
+
+  const dailyTransactions = generateDailyTransactions();
+  const batchDuration = 22500;
+  let currentBatchIndex = 0;
+
+  function updateTicker() {
+    const nextBatch = dailyTransactions.slice(currentBatchIndex, currentBatchIndex + 5);
+    displayTransactions(nextBatch);
+
+    currentBatchIndex = (currentBatchIndex + 5) % dailyTransactions.length;
+
+    setTimeout(updateTicker, batchDuration);
+  }
+
+  function startTickerAtCorrectTime() {
+    const now = new Date();
+    const secondsSinceMidnight = now.getHours() * 3600 + now.getMinutes() * 60 + now.getSeconds();
+    const currentBatchTimeSlot = Math.floor(secondsSinceMidnight / 22.5);
+    currentBatchIndex = (currentBatchTimeSlot * 5) % dailyTransactions.length;
+
+    updateTicker();
+  }
+
+  startTickerAtCorrectTime();
+</script>
+
+<style>
+  /* Main ticker container */
+  .ticker-container {
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px 0;
+  }
+  
+  /* Header row styling */
+  .ticker-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 15px;
+    border-bottom: 2px solid #ddd;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    font-size: 1.1em;
+    color: #333;
+    background-color: #f2f2f2;
+  }
+
+  /* Header title styling */
+  .header-title {
+    flex: 1;
+    text-align: center;
+    color: #444;
+  }
+
+  /* Transaction ticker row styling */
+  .ticker {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  /* Individual ticker item styling */
+  .ticker-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 15px;
+    border-bottom: 1px solid #eee;
+    font-family: Arial, sans-serif;
+    font-size: 1em;
+    color: #333;
+  }
+  
+  .item {
+    flex: 1;
+    text-align: center;
+  }
+  
+  /* Styling for each column */
+  .name {
+    color: #2e7d32;
+    font-weight: bold;
+  }
+  
+  .action {
+    color: #0288d1;
+    font-style: italic;
+  }
+  
+  .amount {
+    color: #d32f2f;
+    font-weight: bold;
+  }
+
+  /* Frame styling */
+  .ticker-container {
+    background-color: #fbfbfb;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+</style>
