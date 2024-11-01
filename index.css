@@ -1,125 +1,154 @@
-/* Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Investment Page</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
 
-body {
-  font-family: Arial, sans-serif;
-}
+    <!-- Header Section -->
+    <header class="header">
+        <div class="logo">
+            <img src="images/logo.png" alt="Logo">
+        </div>
+        <nav class="navbar">
+            <a href="#">Home</a>
+            <a href="#">About Us</a>
+            <a href="#">Invest Now</a>
+            <a href="#">Contact Us</a>
+        </nav>
+        <div class="header-buttons">
+            <a href="#" class="button wallet">Go To My Wallet</a>
+            <a href="#" class="button profile">Go To My Profile</a>
+        </div>
+    </header>
 
-.site-header {
-  display: flex;
-  align-items: center;
-  padding: 10px 20px;
-  background-color: #f8f8f8;
-  border-bottom: 2px solid #e0e0e0;
-}
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <img src="images/hero-image.png" alt="Hero Image">
+            <div class="hero-text">
+                <h1>INVESTMENT YOU CAN TRUST</h1>
+                <p>Withdraw<br>Secure Your Financial Future with Our High-Yield Investment Firm. Earn Massive Profits with Our AI Powered Trading/Investments</p>
+                <a href="#" class="button wallet">Go to My Wallet</a>
+            </div>
+        </div>
+        <div class="app-buttons">
+            <a href="#"><img src="images/google-play.png" alt="Google Play"></a>
+        </div>
+    </section>
 
-.logo {
-  display: flex;
-  align-items: center;
-  margin-right: 20px;
-}
+    <!-- Investment Options Section -->
+    <section class="investment-options">
+        <h2>Invest</h2>
+        <p>All your investments.<br>All on Soft Return Investment</p>
+        <div class="options">
+            <div class="option">
+                <h3>Cryptocurrencies</h3>
+                <p>Buy, sell, and swap the cryptocurrencies you want anytime, anywhere.</p>
+                <a href="#">Learn more</a>
+            </div>
+            <div class="option">
+                <h3>Stocks</h3>
+                <p>Buy, sell, and swap stocks you want anytime, anywhere. Invest in fractions of your favorite companies without buying a full share.</p>
+                <a href="#">Read story</a>
+            </div>
+            <div class="option">
+                <h3>ETFs</h3>
+                <p>Invest in fractions of your favorite ETFs without buying a full share.</p>
+                <a href="#">Learn more</a>
+            </div>
+        </div>
+    </section>
 
-.logo-image {
-  height: 40px;
-}
+    <!-- Pricing Section -->
+    <section class="pricing">
+        <h2>Pricing that fits every stage</h2>
+        <p>Whether you are just starting or have a growing startup</p>
+        <div class="pricing-plans">
+            <div class="plan">
+                <div class="label">Most popular</div>
+                <h3>Started Return</h3>
+                <p>$37 / 1 Day</p>
+                <ul>
+                    <li>Invest $75 and Earn $200 in Profit</li>
+                    <li>1 Day Duration</li>
+                </ul>
+                <a href="#" class="button buy">Buy Now</a>
+            </div>
+            <div class="plan">
+                <h3>Basic Return</h3>
+                <p>$85 / 3 Days</p>
+                <ul>
+                    <li>Invest $85 and Earn $450 in 3 Days</li>
+                    <li>3 Days Duration</li>
+                </ul>
+                <a href="#" class="button buy">Buy Now</a>
+            </div>
+            <div class="plan">
+                <h3>Standard Return</h3>
+                <p>$140 / 4 Days</p>
+                <ul>
+                    <li>Invest $140 and Earn $920</li>
+                    <li>4 Days Duration</li>
+                </ul>
+                <a href="#" class="button buy">Buy Now</a>
+            </div>
+            <div class="plan">
+                <h3>Custom Price Return</h3>
+                <p>Starts from $10 / 1 Day</p>
+                <ul>
+                    <li>Get Plan Starting from $10</li>
+                    <li>1 Day Duration</li>
+                </ul>
+                <a href="#" class="button custom">Request Custom Price</a>
+            </div>
+        </div>
+    </section>
 
-.nav-links {
-  display: flex;
-  flex-grow: 1;
-}
+    <!-- Market & News Section -->
+    <section class="market-news">
+        <div class="market-chart">
+            <img src="images/market-chart.png" alt="Market Chart">
+        </div>
+        <div class="crypto-news">
+            <img src="images/crypto-news.png" alt="Crypto News">
+        </div>
+    </section>
 
-.nav-item {
-  margin: 0 15px;
-  color: #00b300;
-  text-decoration: none;
-  font-weight: bold;
-}
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="trusted">
+            <img src="images/trust-logo1.png" alt="Regulated">
+            <img src="images/trust-logo2.png" alt="Safe & Secure">
+            <img src="images/trust-logo3.png" alt="Trusted">
+        </div>
+        <div class="featured">
+            <img src="images/logo-forbes.png" alt="Forbes">
+            <img src="images/logo-bloomberg.png" alt="Bloomberg">
+            <img src="images/logo-techcrunch.png" alt="TechCrunch">
+            <img src="images/logo-cnbc.png" alt="CNBC">
+        </div>
+        <div class="footer-links">
+            <div class="company">
+                <h4>Company</h4>
+                <a href="#">About</a>
+                <a href="#">Contact</a>
+            </div>
+            <div class="product">
+                <h4>Product</h4>
+                <a href="#">Features</a>
+                <a href="#">Invest Now</a>
+            </div>
+            <div class="support">
+                <h4>Support</h4>
+                <a href="#">Help Center</a>
+                <a href="#">FAQ</a>
+            </div>
+        </div>
+    </footer>
 
-.nav-item:hover {
-  text-decoration: underline;
-}
-
-.action-buttons {
-  display: flex;
-}
-
-.action-button {
-  background-color: #00b300;
-  color: white;
-  padding: 8px 15px;
-  border-radius: 5px;
-  text-decoration: none;
-  margin-right: 10px;
-  font-weight: bold;
-}
-
-.action-button:hover {
-  background-color: #009900;
-}
-
-.profile-icon {
-  background-color: #d3d3d3;
-  color: #555;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: bold;
-}
-
-/* Crypto Ticker */
-.crypto-ticker {
-  display: flex;
-  align-items: center;
-  padding: 10px 20px;
-  background-color: #e9e9e9;
-  border-top: 1px solid #d0d0d0;
-}
-
-.ticker {
-  display: flex;
-  overflow-x: auto;
-  white-space: nowrap;
-  flex-grow: 1;
-}
-
-.ticker-item {
-  display: inline-block;
-  padding: 0 15px;
-  font-size: 14px;
-  color: #333;
-}
-
-.price {
-  font-weight: bold;
-  margin-left: 5px;
-}
-
-.percent-change {
-  color: #f00;
-  margin-left: 5px;
-}
-
-.ticker-source {
-  font-size: 12px;
-  color: #888;
-  margin-left: 20px;
-  white-space: nowrap;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .nav-links, .action-buttons, .profile-icon {
-    display: none;
-  }
-
-  .site-header {
-    justify-content: center;
-  }
-}
+</body>
+</html>
