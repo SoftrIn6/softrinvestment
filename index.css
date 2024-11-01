@@ -1,82 +1,50 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Arial, sans-serif;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crypto Investment Site</title>
+  <link rel="stylesheet" href="header.css">
+</head>
+<body>
+  <!-- Header Section -->
+  <header class="site-header">
+    <!-- Logo -->
+    <div class="logo">
+      <img src="path/to/logo.png" alt="Logo" class="logo-image">
+    </div>
 
-body {
-  background-color: #121212;
-  color: #fff;
-  line-height: 1.6;
-}
+    <!-- Navigation Links -->
+    <nav class="nav-links">
+      <a href="#" class="nav-item">Home</a>
+      <a href="#" class="nav-item">About Us</a>
+      <a href="#" class="nav-item">Invest Now</a>
+      <a href="#" class="nav-item">Contact Us</a>
+    </nav>
 
-.hero {
-  text-align: center;
-  padding: 3em 2em;
-  background: linear-gradient(135deg, #0d47a1, #2196f3);
-}
+    <!-- Action Buttons -->
+    <div class="action-buttons">
+      <a href="#" class="action-button">Go To My Wallet</a>
+      <a href="#" class="action-button">Go To My Profile</a>
+    </div>
 
-h1 {
-  font-size: 2.5em;
-  margin-bottom: 0.5em;
-  animation: fadeIn 2s ease-in-out;
-}
+    <!-- Profile Icon -->
+    <div class="profile-icon">
+      <span>rt</span>
+    </div>
+  </header>
 
-h2, h3 {
-  color: #2196f3;
-}
-
-.cta-button {
-  background-color: #2196f3;
-  color: #fff;
-  padding: 0.7em 2em;
-  border: none;
-  font-size: 1em;
-  cursor: pointer;
-  margin-top: 1em;
-  transition: transform 0.2s;
-}
-
-.cta-button:hover {
-  transform: scale(1.05);
-}
-
-.investment-options, .pricing, .features {
-  padding: 2em;
-  margin: 2em 0;
-}
-
-.option, .plan, .feature {
-  margin-bottom: 1em;
-  background: #1c1c1c;
-  padding: 1.5em;
-  border-radius: 8px;
-  transition: transform 0.2s;
-}
-
-.option:hover, .plan:hover, .feature:hover {
-  transform: translateY(-5px);
-}
-
-.pricing-plans {
-  display: flex;
-  gap: 1em;
-  justify-content: center;
-}
-
-.plan.popular {
-  border: 2px solid #2196f3;
-}
-
-.footer-links a {
-  color: #2196f3;
-  text-decoration: none;
-  margin: 0 1em;
-}
-
-.footer {
-  text-align: center;
-  padding: 1.5em 0;
-  background: #0d47a1;
-}
+  <!-- Cryptocurrency Ticker Section -->
+  <section class="crypto-ticker">
+    <div class="ticker">
+      <span class="ticker-item">BTC <span class="price">$23.84</span> <span class="percent-change">-5.99%</span></span>
+      <span class="ticker-item">NEO <span class="price">$9.707</span> <span class="percent-change">-4.12%</span></span>
+      <span class="ticker-item">Bitcoin SV <span class="price">$49.62</span> <span class="percent-change">+9.98%</span></span>
+      <span class="ticker-item">Quant <span class="price">$58.62</span> <span class="percent-change">-11.87%</span></span>
+      <span class="ticker-item">Nexo <span class="price">$0.99</span> <span class="percent-change">+0.97%</span></span>
+      <span class="ticker-item">OKB Token <span class="price">$39.77</span></span>
+    </div>
+    <div class="ticker-source">Cryptocurrency Prices by Coinlib</div>
+  </section>
+</body>
+</html>
