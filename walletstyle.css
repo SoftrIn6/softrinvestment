@@ -1,0 +1,49 @@
+/* Wallet Dashboard Styles */
+.wallet-dashboard {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+.wallet-dashboard h2 {
+    text-align: center;
+    color: #333;
+}
+.wallet-dashboard p {
+    text-align: center;
+    color: #555;
+}
+.wallet-balance {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.crypto-balance {
+    flex: 1 1 calc(50% - 20px);
+    margin: 10px;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.crypto-balance h3 {
+    color: #333;
+}
+.crypto-balance p {
+    color: #333;
+}
+.crypto-balance button {
+    margin: 5px;
+    padding: 8px 12px;
+    background-color: #008080;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.crypto-balance button:hover {
+    background-color: #005f5f;
+}
