@@ -1,31 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Wallet | Soft Return Investment</title>
-  <link rel="stylesheet" href="styles.css">
-  <script src="script.js" defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wallet Dashboard - Soft Return Investment</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header>
-    <!-- Same header as index.html -->
-  </header>
+    <!-- Navigation Bar -->
+    <header>
+        <div class="logo">Soft Return Investment</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="investment-plans.html">Investment Plans</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+            </ul>
+        </nav>
+    </header>
 
-  <section class="wallet-section">
-    <h2>Your Wallet</h2>
-    <div class="wallet-balance">
-      <p>Balance: <span id="balance">$0.00</span></p>
-    </div>
-    <div class="wallet-actions">
-      <button onclick="deposit()">Deposit</button>
-      <button onclick="withdraw()">Withdraw</button>
-      <button onclick="exchange()">Exchange</button>
-    </div>
-  </section>
+    <!-- Wallet Dashboard -->
+    <section class="wallet-dashboard">
+        <h2>Your Crypto Wallet</h2>
+        <p>Manage and track your cryptocurrency investments in real-time.</p>
 
-  <footer>
-    <!-- Same footer as index.html -->
-  </footer>
-</body>
-</html>
+        <!-- Wallet Balance Display -->
+        <div class="wallet-balance">
+            <div class="crypto-balance">
+                <h3>Bitcoin (BTC)</h3>
+                <p>Balance: <span id="btc-balance">0.000000 BTC</span></p>
+                <button onclick="deposit('BTC')">Deposit</button>
+                <button onclick="withdraw('BTC')
