@@ -1,0 +1,58 @@
+/* Resetting some styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Navigation bar styling */
+.navbar {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: white;
+}
+
+/* Logo styling */
+.logo {
+    height: 40px;
+    margin-right: 20px;
+}
+
+/* Navigation links styling */
+.nav-links {
+    display: flex;
+    gap: 20px;
+    flex-grow: 1;
+}
+
+.nav-links a {
+    text-decoration: none;
+    font-size: 16px;
+    color: #00D957; /* Green color */
+    font-weight: bold;
+}
+
+/* Button styling */
+.buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.buttons .btn {
+    padding: 8px 15px;
+    background-color: #00D957; /* Green color */
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.buttons .btn:hover {
+    background-color: #00c74c; /* Darker green on hover */
+}
