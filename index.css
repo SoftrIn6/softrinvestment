@@ -1,83 +1,82 @@
 * {
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
 }
 
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
+  background-color: #121212;
+  color: #fff;
+  line-height: 1.6;
 }
 
-.header {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-    background-color: white;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+.hero {
+  text-align: center;
+  padding: 3em 2em;
+  background: linear-gradient(135deg, #0d47a1, #2196f3);
 }
 
-.logo-section {
-    display: flex;
-    align-items: center;
-    margin-right: auto;
+h1 {
+  font-size: 2.5em;
+  margin-bottom: 0.5em;
+  animation: fadeIn 2s ease-in-out;
 }
 
-.logo {
-    width: 50px;
-    height: auto;
-    margin-right: 10px;
+h2, h3 {
+  color: #2196f3;
 }
 
-.logo-text .light-blue {
-    color: #3B82F6;
-    margin: 0;
+.cta-button {
+  background-color: #2196f3;
+  color: #fff;
+  padding: 0.7em 2em;
+  border: none;
+  font-size: 1em;
+  cursor: pointer;
+  margin-top: 1em;
+  transition: transform 0.2s;
 }
 
-.logo-text .gray {
-    color: #6B7280;
-    margin: 0;
+.cta-button:hover {
+  transform: scale(1.05);
 }
 
-.navigation {
-    display: flex;
-    gap: 20px;
+.investment-options, .pricing, .features {
+  padding: 2em;
+  margin: 2em 0;
 }
 
-.navigation a {
-    color: #3B82F6;
-    text-decoration: none;
-    transition: color 0.3s;
+.option, .plan, .feature {
+  margin-bottom: 1em;
+  background: #1c1c1c;
+  padding: 1.5em;
+  border-radius: 8px;
+  transition: transform 0.2s;
 }
 
-.navigation a:hover {
-    color: #1E40AF;
+.option:hover, .plan:hover, .feature:hover {
+  transform: translateY(-5px);
 }
 
-.action-buttons {
-    margin-left: auto;
+.pricing-plans {
+  display: flex;
+  gap: 1em;
+  justify-content: center;
 }
 
-.button {
-    padding: 10px 15px;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    margin-left: 10px;
-    transition: background-color 0.3s;
+.plan.popular {
+  border: 2px solid #2196f3;
 }
 
-.purple {
-    background-color: #A855F7;
+.footer-links a {
+  color: #2196f3;
+  text-decoration: none;
+  margin: 0 1em;
 }
 
-.purple:hover {
-    background-color: #9333EA;
-}
-
-.green {
-    background-color: #10B981;
-}
-
-.green:hover {
-    background-color: #059669;
+.footer {
+  text-align: center;
+  padding: 1.5em 0;
+  background: #0d47a1;
 }
